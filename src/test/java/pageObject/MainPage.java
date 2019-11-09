@@ -1,6 +1,8 @@
 package pageObject;
 
+import helpers.TypeInField;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -31,7 +33,7 @@ public class MainPage extends BasePage {
     }
 
     public void getPlusOneAdult() throws InterruptedException {
-        Thread.sleep(500);
+        Thread.sleep(1000);
         Actions clc = new Actions(driver);
         clc.moveToElement(wait.until(x -> driver.findElement(By.xpath("//*[@d='M5 3h3v2H5v3H3V5H0V3h3V0h2v3z']")))).click().perform();
         //return wait.until(x -> driver.findElement(By.xpath("//*[@d='M5 3h3v2H5v3H3V5H0V3h3V0h2v3z']")));
@@ -85,6 +87,7 @@ public class MainPage extends BasePage {
                 //TypeInField.typeInField(itr.next(), i);
                 itr.next().sendKeys("         " + i);
             }
+
     }
 
 
